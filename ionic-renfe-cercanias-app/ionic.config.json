@@ -1,0 +1,7 @@
+{
+  "name": "ionic-renfe-cercanias-app",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
