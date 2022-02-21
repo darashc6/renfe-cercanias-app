@@ -24,7 +24,11 @@
     "@capacitor/haptics": "1.1.4",
     "@capacitor/keyboard": "1.2.2",
     "@capacitor/status-bar": "1.0.8",
+    "@iconify/icons-carbon": "^1.2.2",
+    "@iconify/icons-ic": "^1.2.2",
+    "@iconify/icons-mdi": "^1.2.1",
     "@ionic/angular": "^6.0.0",
+    "@visurel/iconify-angular": "^11.0.0",
     "rxjs": "~6.6.0",
     "tslib": "^2.2.0",
     "zone.js": "~0.11.4"
