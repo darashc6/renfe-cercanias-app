@@ -4,22 +4,19 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
-import { InfoPageRoutingModule } from './info-routing.module';
+import { InfoInformationListPageRoutingModule } from './info-information-list-routing.module';
 
-import { InfoPage } from './info.page';
-
-import { InfoListIntroComponent } from 'src/app/components/info-list-intro/info-list-intro.component';
+import { InfoInformationListPage } from './info-information-list.page';
 
 import { InfoDetailsCardComponent } from 'src/app/components/info-details-card/info-details-card.component';
-
 
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    InfoPageRoutingModule,
+    InfoInformationListPageRoutingModule
   ],
-  declarations: [InfoPage, InfoListIntroComponent, InfoDetailsCardComponent]
+  declarations: [InfoInformationListPage, InfoDetailsCardComponent]
 })
-export class InfoPageModule {}
+export class InfoInformationListPageModule {}

@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ModalController } from '@ionic/angular';
+import { QrCodeModalPage } from 'src/app/pages/qr-code-modal/qr-code-modal.page';
 
 @Component({
   selector: 'app-user-renfe-card',
@@ -7,8 +9,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserRenfeCardComponent implements OnInit {
 
-  constructor() { }
+  constructor(private modalController: ModalController) { }
 
   ngOnInit() {}
 
+  async showQrModal() {
+    const modal = await this.modalController.create({
+      component: QrCodeModalPage,
+      breakpoints: [0, 1],
+      initialBreakpoint: 1
+    });
+
+    await modal.present();
+  }
 }

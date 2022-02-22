@@ -1,0 +1,17 @@
+<ion-grid>
+  <ion-row class="ion-align-items-center">
+    <ion-col size="8">
+      <ion-text>
+        <b>{{ headerName }}</b>
+      </ion-text>
+    </ion-col>
+    <ion-col size="4">
+      <ion-button size="small" (click)="goToListPage()">Ver más</ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">
+      <app-info-details-card [info]="infoToDisplay"></app-info-details-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>

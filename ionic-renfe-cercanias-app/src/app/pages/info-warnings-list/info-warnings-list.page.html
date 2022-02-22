@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Avisos</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/app/info"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="background-color">
+  <ion-list class="warning-list-container" color="background-color">
+    <app-info-details-card *ngFor="let warning of listWarnings" [info]="warning"></app-info-details-card>
+  </ion-list>
+</ion-content>

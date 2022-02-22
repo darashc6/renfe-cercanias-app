@@ -1,9 +1,4 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>info</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
+<ion-content color="background-color" class="ion-padding">
+  <app-info-list-intro [headerName]="'Avisos'" [listInfoRoute]="'/app/info/warning-list'" [infoToDisplay]="firstWarning"></app-info-list-intro>
+  <app-info-list-intro [headerName]="'Información'" [listInfoRoute]="'/app/info/information-list'" [infoToDisplay]="firstInformation"></app-info-list-intro>
 </ion-content>

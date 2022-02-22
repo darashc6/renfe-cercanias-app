@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-profile-option-btn',
@@ -8,10 +9,14 @@ import { Component, Input, OnInit } from '@angular/core';
 export class ProfileOptionBtnComponent implements OnInit {
   @Input() btnIcon: string = "";
   @Input() btnLabel: string = "";
+  @Input() optionRoute: string = "";
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() {
   }
 
+  goToSettingsPage() {
+    this.router.navigateByUrl(this.optionRoute);
+  }
 }

@@ -1,0 +1,12 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-title>Información</ion-title>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/app/info"></ion-back-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="background-color">
+  <app-info-details-card *ngFor="let info of listInfo" [info]="info"></app-info-details-card>
+</ion-content>
