@@ -4,6 +4,8 @@ import cardAccountDetails from "@iconify/icons-mdi/card-account-details";
 import trainVariant from "@iconify/icons-mdi/train-variant";
 import baselineLogout from "@iconify/icons-ic/baseline-logout";
 import baselineTrain from "@iconify/icons-ic/baseline-train";
+import clockTimeFive from "@iconify/icons-mdi/clock-time-five";
+import calendar from "@iconify/icons-mdi/calendar";
 
 
 export const appIcons = {
@@ -12,5 +14,7 @@ export const appIcons = {
     'recharge-card': cardAccountDetails,
     'default-station': trainVariant,
     'logout': baselineLogout,
-    'select-station': baselineTrain
+    'select-station': baselineTrain,
+    'select-time': clockTimeFive,
+    'select-date': calendar
 }

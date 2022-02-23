@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-station-details-btn',
@@ -11,11 +12,11 @@ export class StationDetailsBtnComponent implements OnInit {
   @Input() subtitle: string = ''
   @Input() nextPageUrl: string = '';
 
-  constructor() { }
+  constructor(private router: Router) { }
 
   ngOnInit() { }
 
   goToStationDetailsPage() {
-    // TODO - Create Pages for each 'Details' route
+    this.router.navigateByUrl(this.nextPageUrl);
   }
 }

@@ -3,7 +3,7 @@
     <ion-grid>
       <ion-row class="ion-align-items-center">
         <ion-col size="10">
-          <ion-row class="ion-align-items-center">
+          <ion-row>
             <ion-col size="3">
               <ic-icon icon="select-station" class="search-form-icon"></ic-icon>
             </ion-col>
@@ -30,35 +30,62 @@
           </ion-row>
         </ion-col>
         <ion-col size="2">
-          <ion-icon name="swap-vertical" color="primary" size="large"></ion-icon>
+          <ion-icon (click)="switchSelectedStations()" name="swap-vertical" color="primary" size="large"></ion-icon>
         </ion-col>
       </ion-row>
-
-      <!-- <ion-row class="ion-align-items-center">
-        <ion-col size="3" offset="1">
-          <ic-icon icon="select-station" class="search-form-icon"></ic-icon>
-        </ion-col>
-        <ion-col size="7">
-          <ion-text color="dark">
-            <p class="select-station-text">Fuengirola</p>
-          </ion-text>
+      <ion-row>
+        <ion-col size="12">
+          <ion-row class="ion-align-items-center">
+            <ion-col size="5" button="true" id="time-picker">
+              <ion-row class="ion-align-items-center">
+                <ion-col size="5">
+                  <ic-icon icon="select-time" class="search-form-icon"></ic-icon>
+                </ion-col>
+                <ion-col size="7">
+                  <ion-text color="dark">
+                    <p class="datetime-text">{{ stringTime }}</p>
+                  </ion-text>
+                </ion-col>
+              </ion-row>
+              <ion-popover trigger="time-picker">
+                <ng-template>
+                  <ion-datetime #popoverTimePicker presentation="time">
+                    <ion-buttons slot="buttons">
+                      <ion-button (click)="confirmSelectedTime()">Confirmar</ion-button>
+                    </ion-buttons>
+                  </ion-datetime>
+                </ng-template>
+              </ion-popover>
+            </ion-col>
+            <ion-col size="6" offset="1" id="date-picker">
+              <ion-row class="ion-align-items-center">
+                <ion-col size="5">
+                  <ic-icon icon="select-date" class="search-form-icon"></ic-icon>
+                </ion-col>
+                <ion-col size="7">
+                  <ion-text color="dark">
+                    <p class="datetime-text">{{ stringDate | date: 'dd/MM/yy' }}</p>
+                  </ion-text>
+                </ion-col>
+              </ion-row>
+              <ion-popover trigger="date-picker">
+                <ng-template>
+                  <ion-datetime #popoverDatePicker presentation="date" min="{{ stringDate }}">
+                    <ion-buttons slot="buttons">
+                      <ion-button (click)="confirmSelectedDate()">Confirmar</ion-button>
+                    </ion-buttons>
+                  </ion-datetime>
+                </ng-template>
+              </ion-popover>
+            </ion-col>
+          </ion-row>
         </ion-col>
       </ion-row>
-      <ion-row class="ion-justify-content-center">
-        <ion-col size="9">
-          <div class="divider"></div>
+      <ion-row>
+        <ion-col size="12" class="ion-flex ion-justify-content-center">
+          <ion-button (click)="searchTimings()">Ver horarios</ion-button>
         </ion-col>
       </ion-row>
-      <ion-row class="ion-align-items-center">
-        <ion-col size="3" offset="1">
-          <ic-icon icon="select-station" class="search-form-icon"></ic-icon>
-        </ion-col>
-        <ion-col size="7">
-          <ion-text color="dark">
-            <p class="select-station-text">Victoria Kent</p>
-          </ion-text>
-        </ion-col>
-      </ion-row> -->
     </ion-grid>
   </ion-card-content>
 </ion-card>

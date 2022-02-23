@@ -39,6 +39,22 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
+          },
+          {
+            path: 'pets-and-cycles',
+            loadChildren: () => import('../station-details-travelling-pets-cycles/station-details-travelling-pets-cycles.module').then(m => m.StationDetailsTravellingPetsCyclesPageModule)
+          },
+          {
+            path: 'train-lines',
+            loadChildren: () => import('../station-details-train-lines/station-details-train-lines.module').then(m => m.StationDetailsTrainLinesPageModule)
+          },
+          {
+            path: 'fares',
+            loadChildren: () => import('../station-details-fares/station-details-fares.module').then(m => m.StationDetailsFaresPageModule)
+          },
+          {
+            path: 'customer-service',
+            loadChildren: () => import('../station-details-customer-service/station-details-customer-service.module').then(m => m.StationDetailsCustomerServicePageModule)
           }
         ]
       },

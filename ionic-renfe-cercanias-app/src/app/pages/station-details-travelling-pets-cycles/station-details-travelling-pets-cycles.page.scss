@@ -1,0 +1,25 @@
+li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.accordion-group-container {
+  margin: 10px 0;
+}
+
+.accordion-card {
+  border-radius: 6px;
+}
+
+.accordion-title {
+  font-weight: bold;
+}
+
+.link-renfe-cercanias {
+  font-weight: bold;
+  text-decoration: underline;
+  color: var(--ion-color-primary);
+}
+
+.list-info {
+    padding: 0 25px;
+}
