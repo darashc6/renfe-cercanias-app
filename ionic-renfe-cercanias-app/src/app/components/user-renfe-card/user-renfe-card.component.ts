@@ -11,13 +11,13 @@ export class UserRenfeCardComponent implements OnInit {
 
   constructor(private modalController: ModalController) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   async showQrModal() {
     const modal = await this.modalController.create({
       component: QrCodeModalPage,
-      breakpoints: [0, 1],
-      initialBreakpoint: 1
+      breakpoints: [0, 0.8],
+      initialBreakpoint: 0.8,
     });
 
     await modal.present();

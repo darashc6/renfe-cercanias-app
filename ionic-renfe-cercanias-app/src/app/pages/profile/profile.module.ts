@@ -21,7 +21,7 @@ import { IconModule } from '@visurel/iconify-angular';
     ProfilePageRoutingModule,
     IconModule
   ],
-  exports: [ ],
+  exports: [],
   declarations: [ProfilePage, UserRenfeCardComponent, ProfileOptionBtnComponent]
 })
-export class ProfilePageModule {}
+export class ProfilePageModule { }

@@ -1,9 +1,21 @@
-<ion-header>
-  <ion-toolbar>
-    <ion-title>home</ion-title>
-  </ion-toolbar>
-</ion-header>
-
-<ion-content>
-
+<ion-content class="ion-padding" color="background-color">
+  <app-search-train-timings-form></app-search-train-timings-form>
+  <!-- <ion-item button id="open-modal">
+    <ion-label>Date</ion-label>
+    <ion-popover trigger="open-modal">
+      <ng-template>
+        <ion-datetime #popoverDatetime presentation="date">
+          <ion-buttons slot="buttons">
+            <ion-button>Confirm</ion-button>
+          </ion-buttons>
+        </ion-datetime>
+      </ng-template>
+    </ion-popover>
+  </ion-item> -->
+  <!-- <div class="divider"></div> -->
+  <ion-list class="list-station-details-btn">
+    <app-station-details-btn *ngFor="let stationDetailData of stationDetailsDataList"
+      [imgUrl]="stationDetailData.imgUrl" [title]="stationDetailData.title" [subtitle]="stationDetailData.subtitle"
+      [nextPageUrl]="stationDetailData.nextPageUrl"></app-station-details-btn>
+  </ion-list>
 </ion-content>

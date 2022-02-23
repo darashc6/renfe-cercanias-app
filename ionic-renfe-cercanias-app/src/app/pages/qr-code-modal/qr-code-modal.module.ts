@@ -8,6 +8,8 @@ import { QrCodeModalPageRoutingModule } from './qr-code-modal-routing.module';
 
 import { QrCodeModalPage } from './qr-code-modal.page';
 
+import { RenfeCardComponent } from 'src/app/components/renfe-card/renfe-card.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +17,6 @@ import { QrCodeModalPage } from './qr-code-modal.page';
     IonicModule,
     QrCodeModalPageRoutingModule
   ],
-  declarations: [QrCodeModalPage]
+  declarations: [QrCodeModalPage, RenfeCardComponent]
 })
 export class QrCodeModalPageModule {}

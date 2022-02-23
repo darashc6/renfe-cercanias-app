@@ -1,0 +1,37 @@
+ion-card {
+  background: #6b057c;
+  background: linear-gradient(315deg, #6b057c 0%, #9511a8 35%, #af19e4 100%);
+  border-radius: 5px;
+  color: white;
+}
+
+.renfe-card-header {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.renfe-card-container {
+  min-height: 22vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.renfe-logo {
+  width: 80px;
+}
+
+.renfe-card-user-details p {
+  font-size: 0.95em;
+}
+
+.renfe-card-avatar-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.avatar-icon {
+  font-size: 2.35em !important;
+}

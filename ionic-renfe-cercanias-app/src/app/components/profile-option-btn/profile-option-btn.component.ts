@@ -9,7 +9,7 @@ import { Router } from '@angular/router';
 export class ProfileOptionBtnComponent implements OnInit {
   @Input() btnIcon: string = "";
   @Input() btnLabel: string = "";
-  @Input() optionRoute: string = "";
+  @Input() optionRoute: string = null;
 
   constructor(private router: Router) { }
 
@@ -17,6 +17,8 @@ export class ProfileOptionBtnComponent implements OnInit {
   }
 
   goToSettingsPage() {
-    this.router.navigateByUrl(this.optionRoute);
+    if (this.optionRoute) {
+      this.router.navigateByUrl(this.optionRoute);
+    }
   }
 }

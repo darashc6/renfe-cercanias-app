@@ -3,6 +3,7 @@ import trainTicket from "@iconify/icons-carbon/train-ticket";
 import cardAccountDetails from "@iconify/icons-mdi/card-account-details";
 import trainVariant from "@iconify/icons-mdi/train-variant";
 import baselineLogout from "@iconify/icons-ic/baseline-logout";
+import baselineTrain from "@iconify/icons-ic/baseline-train";
 
 
 export const appIcons = {
@@ -10,5 +11,6 @@ export const appIcons = {
     'user-tickets': trainTicket,
     'recharge-card': cardAccountDetails,
     'default-station': trainVariant,
-    'logout': baselineLogout
+    'logout': baselineLogout,
+    'select-station': baselineTrain
 }
