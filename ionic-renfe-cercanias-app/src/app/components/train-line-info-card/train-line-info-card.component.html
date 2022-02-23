@@ -1,0 +1,16 @@
+<ion-card class="card-container" (click)="goToTrainLineDetailsPage()">
+  <ion-card-content class="card-content">
+    <div class="train-line-id train-line-color-{{ trainLine.cssColor }}">
+      <ion-label>{{ trainLine.line }}</ion-label>
+    </div>
+    <div class="stations">
+      <ion-text color="dark">
+        <p class="station-text">{{ trainLine.originStation }}</p>
+        <p class="station-text">{{ trainLine.destinationStation }}</p>
+      </ion-text>
+    </div>
+    <div class="card-icon">
+      <ion-icon name="chevron-forward" class="card-icon" color="dark"></ion-icon>
+    </div>
+  </ion-card-content>
+</ion-card>

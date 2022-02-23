@@ -1,0 +1,14 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/app/home"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Tarifas</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="background-color">
+  <ion-list class="list-fares">
+    <app-fare-header-card *ngFor="let fare of fareList" [fareId]="fare.id" [fareTitle]="fare.title" [fareSubtitle]="fare.subtitle"></app-fare-header-card>
+  </ion-list>
+</ion-content>

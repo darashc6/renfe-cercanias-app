@@ -1,4 +1,4 @@
-<ion-card class="station-details-card">
+<ion-card class="station-details-card" (click)="goToStationDetailsPage()">
   <ion-img src="{{ imgUrl }}"></ion-img>
   <ion-card-header>
     <ion-card-title>
@@ -13,7 +13,7 @@
     <ion-grid>
       <ion-row>
         <ion-col size="6" offset="6">
-          <div class="more-details-btn-container" (click)="goToStationDetailsPage()">
+          <div class="more-details-btn-container">
             <ion-text color="dark">
               Más detalles
             </ion-text>

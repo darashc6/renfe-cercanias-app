@@ -1,0 +1,38 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/app/home/fares"></ion-back-button>
+    </ion-buttons>
+    <ion-title>{{ fare.title }}</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="background-color">
+  <ion-card class="card-container">
+    <ion-card-header>
+      <ion-card-title>
+        ¿Qué te ofrece?
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ul class="list-content">
+        <li *ngFor="let text of fare.content">{{ text }}</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-card class="card-container">
+    <ion-card-header>
+      <ion-card-title>
+        Nuestras tarifas
+      </ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content>
+      <ul class="list-content">
+        <li *ngFor="let price of fare.prices">{{ price.zone }} - {{ price.price | number: '0.2-2' }} €</li>
+      </ul>
+    </ion-card-content>
+  </ion-card>
+</ion-content>

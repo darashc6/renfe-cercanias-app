@@ -42,19 +42,37 @@ const routes: Routes = [
           },
           {
             path: 'pets-and-cycles',
-            loadChildren: () => import('../station-details-travelling-pets-cycles/station-details-travelling-pets-cycles.module').then(m => m.StationDetailsTravellingPetsCyclesPageModule)
+            loadChildren: () => import('../travelling-pets-cycles/travelling-pets-cycles.module').then(m => m.TravellingPetsCyclesPageModule)
           },
           {
             path: 'train-lines',
-            loadChildren: () => import('../station-details-train-lines/station-details-train-lines.module').then(m => m.StationDetailsTrainLinesPageModule)
+            children: [
+              {
+                path: '',
+                loadChildren: () => import('../train-lines/train-lines.module').then(m => m.TrainLinesPageModule)
+              },
+              {
+                path: ':id',
+                loadChildren: () => import('../train-line-details-page/train-line-details-page.module').then(m => m.TrainLineDetailsPagePageModule)
+              }
+            ]
           },
           {
             path: 'fares',
-            loadChildren: () => import('../station-details-fares/station-details-fares.module').then(m => m.StationDetailsFaresPageModule)
+            children: [
+              {
+                path: '',
+                loadChildren: () => import('../fares/fares.module').then(m => m.FaresPageModule)
+              },
+              {
+                path: ':id',
+                loadChildren: () => import('../fare-details/fare-details.module').then(m => m.FareDetailsPageModule)
+              }
+            ]
           },
           {
             path: 'customer-service',
-            loadChildren: () => import('../station-details-customer-service/station-details-customer-service.module').then(m => m.StationDetailsCustomerServicePageModule)
+            loadChildren: () => import('../customer-service/customer-service.module').then(m => m.CustomerServicePageModule)
           }
         ]
       },
@@ -67,7 +85,7 @@ const routes: Routes = [
           },
           {
             path: 'warning-list',
-            loadChildren: () => import('../info-warnings-list/info-warnings-list.module').then( m => m.InfoWarningsListPageModule)
+            loadChildren: () => import('../info-warnings-list/info-warnings-list.module').then(m => m.InfoWarningsListPageModule)
           },
           {
             path: 'information-list',
@@ -88,4 +106,4 @@ const routes: Routes = [
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],
 })
-export class TabsPageRoutingModule {}
+export class TabsPageRoutingModule { }

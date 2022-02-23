@@ -1,0 +1,48 @@
+.card-container {
+  border-radius: 6px;
+  padding: 5px 5px;
+  margin: 10px 0;
+}
+
+.train-line-id {
+  color: white;
+  border-radius: 8px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.train-line-id ion-label {
+  font-size: 1.4em;
+  font-weight: bold;
+}
+
+.card-content {
+  padding: 10px 6px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.stations {
+  padding: 0 30px;
+}
+
+.card-icon {
+  font-size: 1.4em;
+}
+
+.station-text {
+  font-size: 1.1em;
+  font-weight: bold;
+}
+
+.train-line-color-light-blue {
+  background-color: var(--ion-color-light-blue);
+}
+
+.train-line-color-darker-green {
+  background-color: var(--ion-color-darker-green);
+}

@@ -1,0 +1,18 @@
+.card-container {
+  border-radius: 6px;
+  margin: 10px 5px;
+}
+
+.card-header-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-right: 16px;
+}
+
+.card-text,
+.card-icon {
+  color: black;
+  font-size: 1.25em;
+  font-weight: bold;
+}

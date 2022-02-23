@@ -1,0 +1,16 @@
+.card-container {
+  border-radius: 6px;
+}
+
+.list-content {
+  margin-top: 0;
+  padding: 0 25px;
+}
+
+.list-content li {
+  color: black;
+}
+
+.list-content li:not(:last-child) {
+  margin-bottom: 10px;
+}
