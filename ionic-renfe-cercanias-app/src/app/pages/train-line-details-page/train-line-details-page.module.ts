@@ -8,13 +8,18 @@ import { TrainLineDetailsPagePageRoutingModule } from './train-line-details-page
 
 import { TrainLineDetailsPagePage } from './train-line-details-page.page';
 
+import { TrainStationInfoCardComponent } from 'src/app/components/train-station-info-card/train-station-info-card.component';
+
+import { IconModule } from '@visurel/iconify-angular';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    TrainLineDetailsPagePageRoutingModule
+    TrainLineDetailsPagePageRoutingModule,
+    IconModule
   ],
-  declarations: [TrainLineDetailsPagePage]
+  declarations: [TrainLineDetailsPagePage, TrainStationInfoCardComponent]
 })
 export class TrainLineDetailsPagePageModule {}

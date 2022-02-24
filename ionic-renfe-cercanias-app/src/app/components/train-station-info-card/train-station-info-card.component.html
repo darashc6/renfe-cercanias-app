@@ -1,0 +1,20 @@
+<ion-grid>
+  <ion-row class="ion-align-items-center">
+    <ion-col size="1">
+      <div class="circle-icon"></div>
+    </ion-col>
+    <ion-col size="10" offset="1">
+      <ion-card class="card-station-info">
+        <ion-card-header>
+          <ion-card-title class="station-name">
+            {{ station.name }}
+          </ion-card-title>
+        </ion-card-header>
+
+        <ion-card-content class="list-additional-icons">
+          <ic-icon *ngFor="let info of station.additionalInfo" icon="{{ info }}" class="additional-info-icon"></ic-icon>
+        </ion-card-content>
+      </ion-card>
+    </ion-col>
+  </ion-row>
+</ion-grid>

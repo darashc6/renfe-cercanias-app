@@ -6,6 +6,8 @@ import baselineLogout from "@iconify/icons-ic/baseline-logout";
 import baselineTrain from "@iconify/icons-ic/baseline-train";
 import clockTimeFive from "@iconify/icons-mdi/clock-time-five";
 import calendar from "@iconify/icons-mdi/calendar";
+import humanWheelchair from "@iconify/icons-mdi/human-wheelchair";
+import baselineDirectrionsBus from "@iconify/icons-ic/baseline-directions-bus-filled";
 
 
 export const appIcons = {
@@ -16,5 +18,7 @@ export const appIcons = {
     'logout': baselineLogout,
     'select-station': baselineTrain,
     'select-time': clockTimeFive,
-    'select-date': calendar
+    'select-date': calendar,
+    'accesible': humanWheelchair,
+    'bus-stop': baselineDirectrionsBus
 }
