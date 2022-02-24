@@ -1,9 +1,6 @@
-<ion-grid>
-  <ion-row class="ion-align-items-center">
-    <ion-col size="1">
-      <div class="circle-icon"></div>
-    </ion-col>
-    <ion-col size="10" offset="1">
+<ion-grid class="component-container">
+  <ion-row class="ion-align-items-center card-container">
+    <ion-col size="12">
       <ion-card class="card-station-info">
         <ion-card-header>
           <ion-card-title class="station-name">
@@ -12,9 +9,22 @@
         </ion-card-header>
 
         <ion-card-content class="list-additional-icons">
-          <ic-icon *ngFor="let info of station.additionalInfo" icon="{{ info }}" class="additional-info-icon"></ic-icon>
+          <app-additional-info-icon *ngFor="let line of station.connectedLines" [info]="line"></app-additional-info-icon> 
+          <app-additional-info-icon *ngFor="let additionalInfo of station.additionalInfo" [info]="additionalInfo">
+          </app-additional-info-icon>
         </ion-card-content>
       </ion-card>
+    </ion-col>
+  </ion-row>
+  <ion-row class="ion-aling-items-center" *ngIf="!isLast">
+    <ion-col size="6" offset="2">
+      <div class="ion-flex ion-align-items-center ion-justify-content-center">
+        <ion-label class="text-station-travel-time"> {{ station.travelTimeToNextStation }} mins.</ion-label>
+        <div class="line"></div>
+        <!-- <div class="test-left" *ngIf="station.connectedLines">
+          <app-additional-info-icon *ngFor="let line of station.connectedLines" [info]="line"></app-additional-info-icon> 
+        </div> -->
+      </div>
     </ion-col>
   </ion-row>
 </ion-grid>

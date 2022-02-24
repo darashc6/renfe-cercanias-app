@@ -1,12 +1,11 @@
 .card-station-info {
-    margin: 0pc;
+  margin: 0pc;
 }
 
 .circle-icon {
   width: 30px;
   height: 30px;
   border-radius: 100%;
-
   background-color: var(--ion-color-primary);
 }
 

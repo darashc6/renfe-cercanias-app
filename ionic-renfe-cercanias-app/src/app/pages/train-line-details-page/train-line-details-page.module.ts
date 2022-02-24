@@ -12,6 +12,10 @@ import { TrainStationInfoCardComponent } from 'src/app/components/train-station-
 
 import { IconModule } from '@visurel/iconify-angular';
 
+import { RenfeIconComponent } from 'src/app/components/renfe-icon/renfe-icon.component';
+
+import { AdditionalInfoIconComponent } from 'src/app/components/additional-info-icon/additional-info-icon.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -20,6 +24,6 @@ import { IconModule } from '@visurel/iconify-angular';
     TrainLineDetailsPagePageRoutingModule,
     IconModule
   ],
-  declarations: [TrainLineDetailsPagePage, TrainStationInfoCardComponent]
+  declarations: [TrainLineDetailsPagePage, TrainStationInfoCardComponent, RenfeIconComponent, AdditionalInfoIconComponent]
 })
-export class TrainLineDetailsPagePageModule {}
+export class TrainLineDetailsPagePageModule { }

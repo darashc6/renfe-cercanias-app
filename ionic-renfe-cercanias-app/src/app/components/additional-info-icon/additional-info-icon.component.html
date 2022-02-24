@@ -1,0 +1,8 @@
+<ic-icon *ngIf="info === 'accesible'" icon="accesible" class="additional-info-icon"></ic-icon>
+<ic-icon *ngIf="info === 'bus-stop'" icon="bus-stop" class="additional-info-icon"></ic-icon>
+<ion-icon *ngIf="info === 'renfe-ave'" src="../../../assets/renfe_logo_original_color.svg" class="additional-info-icon">
+</ion-icon>
+
+<div *ngIf="info === 'C2' || info === 'C1'" class="train-line-container {{ customCssColor }}">
+    {{ info }}
+</div>

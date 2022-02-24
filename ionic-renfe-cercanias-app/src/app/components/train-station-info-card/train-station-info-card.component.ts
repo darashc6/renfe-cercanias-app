@@ -8,8 +8,10 @@ import { Station } from 'src/app/models/Station';
 })
 export class TrainStationInfoCardComponent implements OnInit {
   @Input() station: Station = null;
+  @Input() isLast: boolean = false;
 
   constructor() { }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 }

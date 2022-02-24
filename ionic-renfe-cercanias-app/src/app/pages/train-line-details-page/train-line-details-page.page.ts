@@ -9,7 +9,7 @@ import { TrainLineService } from 'src/app/services/train-line/train-line.service
   styleUrls: ['./train-line-details-page.page.scss'],
 })
 export class TrainLineDetailsPagePage implements OnInit {
-  private trainLine: TrainLine = null;
+  trainLine: TrainLine = null;
 
   constructor(private trainLineService: TrainLineService, private activatedRoute: ActivatedRoute) { }
 
@@ -20,5 +20,6 @@ export class TrainLineDetailsPagePage implements OnInit {
   getTrainLine() {
     let trainLineId = this.activatedRoute.snapshot.paramMap.get('id');
 
-    this.trainLineService.getTrainLine(trainLineId).subscribe(trainLine => this.trainLine = trainLine);  }
+    this.trainLineService.getTrainLine(trainLineId).subscribe(trainLine => this.trainLine = trainLine);
+  }
 }

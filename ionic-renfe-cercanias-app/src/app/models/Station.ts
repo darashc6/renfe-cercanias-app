@@ -1,4 +1,6 @@
 export interface Station {
     name: string;
-    additionalInfo: string[]
+    additionalInfo: string[];
+    travelTimeToNextStation?: number;
+    connectedLines?: string[];
 }

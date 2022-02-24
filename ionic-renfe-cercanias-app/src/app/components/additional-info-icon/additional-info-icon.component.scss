@@ -1,0 +1,24 @@
+.additional-info-icon {
+  font-size: 2em;
+  padding-right: 10px;
+}
+
+.train-line-container {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  color: white;
+  border-radius: 5px;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.light-blue {
+  background-color: var(--ion-color-light-blue);
+}
+
+.darker-green {
+  background-color: var(--ion-color-darker-green);
+}
