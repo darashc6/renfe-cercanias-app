@@ -72,7 +72,16 @@ const routes: Routes = [
           },
           {
             path: 'customer-service',
-            loadChildren: () => import('../customer-service/customer-service.module').then(m => m.CustomerServicePageModule)
+            children: [
+              {
+                path: '',
+                loadChildren: () => import('../customer-service/customer-service.module').then(m => m.CustomerServicePageModule)
+              },
+              {
+                path: 'contact-form',
+                loadChildren: () => import('../customer-service-contact-form/customer-service-contact-form.module').then(m => m.CustomerServiceContactFormPageModule)
+              }
+            ]
           }
         ]
       },
@@ -97,7 +106,7 @@ const routes: Routes = [
   },
   {
     path: '',
-    redirectTo: '/app/profile',
+    redirectTo: '/app/home',
     pathMatch: 'full'
   }
 ];

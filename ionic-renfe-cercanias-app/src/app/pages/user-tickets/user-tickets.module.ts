@@ -8,6 +8,8 @@ import { UserTicketsPageRoutingModule } from './user-tickets-routing.module';
 
 import { UserTicketsPage } from './user-tickets.page';
 
+import { TicketInfoCardComponent } from 'src/app/components/ticket-info-card/ticket-info-card.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +17,6 @@ import { UserTicketsPage } from './user-tickets.page';
     IonicModule,
     UserTicketsPageRoutingModule
   ],
-  declarations: [UserTicketsPage]
+  declarations: [UserTicketsPage, TicketInfoCardComponent]
 })
 export class UserTicketsPageModule {}

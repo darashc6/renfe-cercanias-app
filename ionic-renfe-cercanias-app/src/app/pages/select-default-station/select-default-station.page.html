@@ -7,6 +7,25 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="background-color">
+<ion-content color="background-color" class="ion-padding">
+  <ion-radio-group value="Hola">
+    <app-default-station-radio-btn [label]="'Asturias'" [value]="'cercanias_asturias'"></app-default-station-radio-btn>
+    <app-default-station-radio-btn [label]="'Bilbao'" [value]="'cercanias_bilbao'"></app-default-station-radio-btn>
+    <app-default-station-radio-btn [label]="'Cádiz'" [value]="'cercanias_cadiz'"></app-default-station-radio-btn>
+    <app-default-station-radio-btn [label]="'Madrid'" [value]="'cercanias_madrid'"></app-default-station-radio-btn>
+    <app-default-station-radio-btn [label]="'Málaga'" [value]="'cercanias_malaga'"></app-default-station-radio-btn>
+    <app-default-station-radio-btn [label]="'Murcia/Alicante'" [value]="'cercanias_murcia_alicante'">
+    </app-default-station-radio-btn>
+    <app-default-station-radio-btn [label]="'Santander'" [value]="'cercanias_santader'"></app-default-station-radio-btn>
+    <app-default-station-radio-btn [label]="'San Sebastian'" [value]="'cercanias_san_sebastian'">
+    </app-default-station-radio-btn>
+    <app-default-station-radio-btn [label]="'Sevilla'" [value]="'cercanias_sevilla'"></app-default-station-radio-btn>
+    <app-default-station-radio-btn [label]="'Valencia'" [value]="'cercanias_valencia'"></app-default-station-radio-btn>
+    <app-default-station-radio-btn [label]="'Zaragoza'" [value]="'cercanias_zaragoza'"></app-default-station-radio-btn>
+    <app-default-station-radio-btn [label]="'Cercanias AM'" [value]="'cercanias_am'"></app-default-station-radio-btn>
+  </ion-radio-group>
 
+  <div class="ion-flex ion-align-items-center ion-justify-content-center">
+    <ion-button class="ion-margin-top" (click)="saveDefaultStationPreferences()">Guardar</ion-button>
+  </div>
 </ion-content>

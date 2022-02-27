@@ -1,0 +1,32 @@
+<div class="ticket-info-card-header">
+  <div class="header-img">
+    <ion-img src="../../../assets/icon/cercanias-v2.svg"></ion-img>
+  </div>
+  <div class="header-title">
+    Cercanías Málaga
+  </div>
+</div>
+<ion-card color="primary" class="ticket-info-card">
+  <ion-card-content>
+    <ion-text class="card-content-text">
+      <p>Origen: Fuengirola</p>
+      <p>Destino: Montemar Alto</p>
+      <p>Tipo: Ida</p>
+    </ion-text>
+    <div class="divider"></div>
+    <ion-text class="card-content-text">
+      <p>Importe: € 1.65</p>
+      <p>Fecha compra: 09/03/2022 12:46</p>
+      <p>Fin validez: 09/03/2022 14:46</p>
+    </ion-text>
+
+    <div class="card-buttons">
+      <div class="qr-code-btn" (click)="showQrCode()">
+        <ion-icon class="qr-icon" name="qr-code-outline" color="dark"></ion-icon>
+      </div>
+      <div class="download-btn">
+        <ion-icon class="download-icon" name="download-outline" color="dark"></ion-icon>
+      </div>
+    </div>
+  </ion-card-content>
+</ion-card>

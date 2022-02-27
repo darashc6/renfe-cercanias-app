@@ -8,6 +8,8 @@ import { SelectDefaultStationPageRoutingModule } from './select-default-station-
 
 import { SelectDefaultStationPage } from './select-default-station.page';
 
+import { DefaultStationRadioBtnComponent } from 'src/app/components/default-station-radio-btn/default-station-radio-btn.component';
+
 @NgModule({
   imports: [
     CommonModule,
@@ -15,6 +17,6 @@ import { SelectDefaultStationPage } from './select-default-station.page';
     IonicModule,
     SelectDefaultStationPageRoutingModule
   ],
-  declarations: [SelectDefaultStationPage]
+  declarations: [SelectDefaultStationPage, DefaultStationRadioBtnComponent]
 })
-export class SelectDefaultStationPageModule {}
+export class SelectDefaultStationPageModule { }

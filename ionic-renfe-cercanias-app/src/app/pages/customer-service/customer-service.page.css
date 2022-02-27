@@ -1,0 +1,13 @@
+.customer-service-form-btn-container {
+  padding-top: 10px;
+  display: flex;
+  justify-content: center;
+}
+
+.station-address-text {
+  padding-top: 10px;
+}
+
+.customer-service-card-info {
+  border-radius: 6px;
+}

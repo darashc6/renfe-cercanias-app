@@ -12,4 +12,7 @@ export class SelectDefaultStationPage implements OnInit {
   ngOnInit() {
   }
 
+  saveDefaultStationPreferences() {
+    // TODO
+  }
 }
