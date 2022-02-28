@@ -187,6 +187,15 @@ export class FareService {
     return of(this.fareList);
   }
 
+  getBasicFares(): Observable<Fare[]> {
+    let customFaresList = this.fareList.filter(fare => fare.id.includes('billete'));
+    return of(customFaresList);
+  }
+  getAvailablePasses(): Observable<Fare[]> {
+    let customFaresList = this.fareList.filter(fare => !fare.id.includes('billete'))
+    return of(customFaresList)
+  }
+
   getFare(fareId: string): Observable<Fare> {
     let fare = this.fareList.find(fare => fare.id === fareId);
     return of(fare);

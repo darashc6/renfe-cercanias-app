@@ -46,3 +46,7 @@ ic-icon {
 ul {
   padding: 0 25px;
 }
+
+li:not(:last-child) {
+  margin-bottom: 10px;
+}

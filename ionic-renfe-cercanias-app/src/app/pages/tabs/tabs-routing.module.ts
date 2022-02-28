@@ -25,7 +25,20 @@ const routes: Routes = [
           },
           {
             path: 'recharge',
-            loadChildren: () => import('../recharge-user-renfe-card/recharge-user-renfe-card.module').then(m => m.RechargeUserRenfeCardPageModule)
+            children: [
+              {
+                path: '',
+                loadChildren: () => import('../recharge-user-renfe-card/recharge-user-renfe-card.module').then(m => m.RechargeUserRenfeCardPageModule)
+              },
+              {
+                path: 'payment-method',
+                loadChildren: () => import('../select-payment-method/select-payment-method.module').then(m => m.SelectPaymentMethodPageModule)
+              },
+              {
+                path: 'confirm',
+                loadChildren: () => import('../confirm-action/confirm-action.module').then(m => m.ConfirmActionPageModule)
+              }
+            ]
           },
           {
             path: 'default-station',
@@ -39,6 +52,19 @@ const routes: Routes = [
           {
             path: '',
             loadChildren: () => import('../home/home.module').then(m => m.HomePageModule)
+          },
+          {
+            path: 'timings',
+            children: [
+              {
+                path: '',
+                loadChildren: () => import('../train-timings/train-timings.module').then(m => m.TrainTimingsPageModule)
+              },
+              {
+                path: 'route',
+                loadChildren: () => import('../train-route-info/train-route-info.module').then(m => m.TrainRouteInfoPageModule)
+              }
+            ]
           },
           {
             path: 'pets-and-cycles',
@@ -101,7 +127,7 @@ const routes: Routes = [
             loadChildren: () => import('../info-information-list/info-information-list.module').then(m => m.InfoInformationListPageModule)
           }
         ]
-      }
+      },
     ]
   },
   {

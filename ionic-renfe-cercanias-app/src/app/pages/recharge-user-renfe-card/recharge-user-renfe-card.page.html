@@ -7,6 +7,43 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="background-color">
+<ion-content color="background-color" class="ion-padding">
+  <ion-grid>
+    <ion-row class="ion-align-items-center">
+      <ion-col size="10">
+        <ion-row class="ion-align-items-center">
+          <ion-col size="3">
+            <ic-icon icon="select-station" class="search-form-icon"></ic-icon>
+          </ion-col>
+          <ion-col size="9">
+            <ion-text color="dark" class="select-station-text">
+              Fuengirola
+            </ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-justify-content-center">
+          <ion-col size="12">
+            <div class="divider"></div>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center">
+          <ion-col size="3">
+            <ic-icon icon="select-station" class="search-form-icon"></ic-icon>
+          </ion-col>
+          <ion-col size="9">
+            <ion-text color="dark" class="select-station-text">
+              Victoria Kent
+            </ion-text>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+      <ion-col size="2">
+        <ion-icon (click)="switchSelectedStations()" name="swap-vertical" color="primary" size="large"></ion-icon>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
 
+  <ion-accordion-group class="fare-list-selection">
+    <app-fare-option-accordion *ngFor="let fare of fareList" [fare]="fare"></app-fare-option-accordion>
+  </ion-accordion-group>
 </ion-content>

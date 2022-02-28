@@ -1,0 +1,29 @@
+<ion-card>
+  <ion-accordion>
+    <ion-item slot="header">
+      <ion-label><b>{{ fare.title }}</b></ion-label>
+    </ion-item>
+
+    <ion-list slot="content">
+      <ion-item lines="none">
+        <ul>
+          <li *ngFor="let text of fare.content">
+            <ion-text color="dark">{{ text }}</ion-text>
+          </li>
+        </ul>
+      </ion-item>
+      <ion-item lines="none">
+        <ion-grid>
+          <ion-row class="ion-align-items-center ion-justify-content-center">
+            <ion-col size="6">
+              <ion-text color="dark"><b>Precio: 18,70€</b></ion-text>
+            </ion-col>
+            <ion-col offset="1" size="5">
+              <ion-button (click)="goToPaymentPage()"><b>Comprar</b></ion-button>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-item>
+    </ion-list>
+  </ion-accordion>
+</ion-card>

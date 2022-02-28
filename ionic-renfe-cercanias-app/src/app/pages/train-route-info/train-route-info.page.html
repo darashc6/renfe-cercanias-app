@@ -1,0 +1,20 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/app/home/timings"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Trayectoria</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="background-color">
+  <ion-card>
+    <ion-grid>
+      <app-route-timings-info *ngFor="let stop of route" [stop]="stop" [isLast]="route.indexOf(stop) === route.length - 1"></app-route-timings-info>
+    </ion-grid>
+  </ion-card>
+
+  <ion-accordion-group>
+    <app-fare-option-accordion *ngFor="let fare of basicFares" [fare]="fare"></app-fare-option-accordion>
+  </ion-accordion-group>
+</ion-content>

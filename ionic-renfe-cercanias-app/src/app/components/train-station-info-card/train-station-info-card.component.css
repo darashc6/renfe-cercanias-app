@@ -25,9 +25,8 @@
 
 .line {
   height: 50px;
-  background-color: red;
+  background-color: var(--ion-color-primary);
   width: 3px;
-  border-radius: 70%;
 }
 
 .component-container {

@@ -9,13 +9,18 @@ const routes: Routes = [
   {
     path: 'qr-code-modal',
     loadChildren: () => import('./pages/qr-code-modal/qr-code-modal.module').then(m => m.QrCodeModalPageModule)
-  },  {
+  },
+  {
     path: 'customer-service-contact-form',
-    loadChildren: () => import('./pages/customer-service-contact-form/customer-service-contact-form.module').then( m => m.CustomerServiceContactFormPageModule)
+    loadChildren: () => import('./pages/customer-service-contact-form/customer-service-contact-form.module').then(m => m.CustomerServiceContactFormPageModule)
   },
   {
     path: 'ticket-qr-code-modal',
-    loadChildren: () => import('./pages/ticket-qr-code-modal/ticket-qr-code-modal.module').then( m => m.TicketQrCodeModalPageModule)
+    loadChildren: () => import('./pages/ticket-qr-code-modal/ticket-qr-code-modal.module').then(m => m.TicketQrCodeModalPageModule)
+  },
+  {
+    path: 'train-route-info',
+    loadChildren: () => import('./pages/train-route-info/train-route-info.module').then( m => m.TrainRouteInfoPageModule)
   },
 
 ];

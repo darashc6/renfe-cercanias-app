@@ -1,0 +1,17 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/app/profile/recharge"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Recargar Tarjeta - Pago</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content class="ion-padding" color="background-color">
+  <ion-list>
+    <app-payment-method-btn [icon]="'visa'" [name]="'Visa'"></app-payment-method-btn>
+    <app-payment-method-btn [icon]="'mastercard'" [name]="'Mastercard'"></app-payment-method-btn>
+    <app-payment-method-btn [icon]="'google-pay'" [name]="'Google Pay'"></app-payment-method-btn>
+    <app-payment-method-btn [icon]="'paypal'" [name]="'Paypal'"></app-payment-method-btn>
+  </ion-list>
+</ion-content>

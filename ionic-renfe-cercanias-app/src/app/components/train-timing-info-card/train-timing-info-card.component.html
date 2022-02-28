@@ -1,0 +1,34 @@
+<ion-card class="train-timing-info-card" button (click)="goToTrainRoutePage()">
+  <ion-grid class="train-timing-info-card-content">
+    <ion-row class="ion-align-items-center ion-justify-content-between">
+      <ion-col size="2">
+        <ion-icon src="../../../assets/icon/cercanias-v2.svg" class="cercanias-icon"></ion-icon>
+      </ion-col>
+      <ion-col size="9">
+        <ion-row class="train-timing-row-container">
+          <ion-col size="6">
+            <ion-text color="dark"><span class="departure-time">13:40</span> - 14:16</ion-text>
+          </ion-col>
+          <ion-col size="6" class="ion-text-right">
+            <ion-text color="dark">36 mins</ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row class="train-timing-row-container">
+          <ion-col size="12">
+            <ion-text color="dark" class="station-text">
+              Málaga-Centro Alameda
+            </ion-text>
+          </ion-col>
+        </ion-row>
+        <ion-row class="ion-align-items-center ion-justify-content-between train-timing-row-container">
+          <ion-col size="6">
+            <ion-text class="train-line">C1</ion-text>
+          </ion-col>
+          <ion-col size="6" class="chevron-icon-container">
+            <ion-icon name="chevron-forward-outline" color="dark" class="chevron-icon"></ion-icon>
+          </ion-col>
+        </ion-row>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-card>

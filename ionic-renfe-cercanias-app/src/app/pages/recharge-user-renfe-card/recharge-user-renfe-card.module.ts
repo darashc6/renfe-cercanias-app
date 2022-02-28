@@ -8,13 +8,18 @@ import { RechargeUserRenfeCardPageRoutingModule } from './recharge-user-renfe-ca
 
 import { RechargeUserRenfeCardPage } from './recharge-user-renfe-card.page';
 
+import { IconModule } from '@visurel/iconify-angular';
+
+import { FareOptionAccordionComponent } from 'src/app/components/fare-option-accordion/fare-option-accordion.component';
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    RechargeUserRenfeCardPageRoutingModule
+    RechargeUserRenfeCardPageRoutingModule,
+    IconModule
   ],
-  declarations: [RechargeUserRenfeCardPage]
+  declarations: [RechargeUserRenfeCardPage, FareOptionAccordionComponent]
 })
-export class RechargeUserRenfeCardPageModule {}
+export class RechargeUserRenfeCardPageModule { }
