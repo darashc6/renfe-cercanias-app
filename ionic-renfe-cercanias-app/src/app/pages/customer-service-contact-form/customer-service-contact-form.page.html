@@ -7,6 +7,52 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="background-color">
+<ion-content class="ion-padding" color="background-color">
+  <ion-card class="customer-service-form-card">
+    <ion-card-header>
+      <ion-card-title>Contactar con Cercanías</ion-card-title>
+      <ion-card-subtitle>
+        Utiliza este formulario para comunicar a Renfe cualquier duda o sugerencia que consideres.
+      </ion-card-subtitle>
+    </ion-card-header>
 
+    <ion-card-content class="customer-service-form">
+      <form [formGroup]="customerServiceForm" (ngSubmit)="onSubmit()">
+        <ion-item lines="none">
+          <ion-label position="stacked">Tipo de petición (*):</ion-label>
+          <ion-select placeholder="Seleccione petición" interface="popover" formControlName="petitionType">
+            <ion-select-option value="informacion">INFORMACIÓN</ion-select-option>
+            <ion-select-option value="sugerencia">SUGERENCIA</ion-select-option>
+            <ion-select-option value="queja">QUEJA</ion-select-option>
+          </ion-select>
+        </ion-item>
+        <app-custom-form-input [label]="'Nombre (*):'" [inputStyle]="'simple'" [inputType]="'text'" [isRequired]="true"
+          [inputFormControl]="nameControl"></app-custom-form-input>
+        <app-custom-form-input [label]="'Primer apellido (*):'" [inputStyle]="'simple'" [inputType]="'text'"
+          [isRequired]="true" [inputFormControl]="firstSurnameControl"></app-custom-form-input>
+        <app-custom-form-input [label]="'Segundo apellido:'" [inputStyle]="'simple'" [inputType]="'text'"
+          [isRequired]="false" [inputFormControl]="secondSurnameControl"></app-custom-form-input>
+        <app-custom-form-input [label]="'Email (*):'" [inputStyle]="'simple'" [inputType]="'email'" [isRequired]="true"
+          [inputFormControl]="emailControl"></app-custom-form-input>
+        <app-custom-form-input [label]="'Teléfono:'" [inputStyle]="'simple'" [inputType]="'tel'" [isRequired]="false"
+          [inputFormControl]="phoneNumberControl"></app-custom-form-input>
+        <app-custom-form-input [label]="'Comentario (*):'" [inputStyle]="'textarea'" [inputType]="'text'"
+          [isRequired]="true" [inputFormControl]="commentControl"></app-custom-form-input>
+
+        <div class="submit-btn-container">
+          <ion-button [disabled]="!customerServiceForm.valid" type="submit" class="submit-btn">Enviar</ion-button>
+        </div>
+      </form>
+    </ion-card-content>
+  </ion-card>
+
+  <ion-text color="dark" class="form-info">
+    <p>
+      (*) Estos datos son obligatorios
+    </p>
+    <p>
+      (**) No introduzca en el espacio destinado a comentarios datos personales o comprometidos (ej. números de
+      tarjetas, claves, etc:)
+    </p>
+  </ion-text>
 </ion-content>

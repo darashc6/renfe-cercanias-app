@@ -1,8 +1,9 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
+import { CustomFormInputModule } from 'src/app/modules/custom-form-input/custom-form-input.module';
 
 import { CustomerServiceContactFormPageRoutingModule } from './customer-service-contact-form-routing.module';
 
@@ -12,9 +13,11 @@ import { CustomerServiceContactFormPage } from './customer-service-contact-form.
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     IonicModule,
-    CustomerServiceContactFormPageRoutingModule
+    CustomerServiceContactFormPageRoutingModule,
+    CustomFormInputModule
   ],
   declarations: [CustomerServiceContactFormPage]
 })
-export class CustomerServiceContactFormPageModule {}
+export class CustomerServiceContactFormPageModule { }

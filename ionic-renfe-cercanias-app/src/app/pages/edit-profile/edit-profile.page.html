@@ -5,13 +5,74 @@
     </ion-buttons>
     <ion-title>Editar Perfil</ion-title>
     <ion-buttons slot="end">
-      <ion-button>
+      <ion-button (click)="saveProfileChanges()">
         <ion-icon slot="icon-only" name="save"></ion-icon>
       </ion-button>
     </ion-buttons>
   </ion-toolbar>
 </ion-header>
 
-<ion-content color="background-color">
+<ion-content color="background-color" class="ion-padding">
+  <form [formGroup]="profileForm">
+    <ion-card class="profile-form-card">
+      <ion-card-header>
+        <ion-card-title>1. Datos Personales</ion-card-title>
+      </ion-card-header>
 
+      <ion-card-content class="profile-form-content">
+        <app-custom-form-input [label]="'Nombre*:'" [inputStyle]="'simple'" [isRequired]="true" [inputType]="'text'"
+          [inputFormControl]="nameControl"></app-custom-form-input>
+        <app-custom-form-input [label]="'1er Apellido*:'" [inputStyle]="'simple'" [isRequired]="true"
+          [inputType]="'text'" [inputFormControl]="firstSurnameControl"></app-custom-form-input>
+        <app-custom-form-input [label]="'2do Apellido:'" [inputStyle]="'simple'" [isRequired]="false"
+          [inputType]="'text'" [inputFormControl]="secondSurnameControl"></app-custom-form-input>
+        <app-custom-form-input [label]="'Teléfono móvil*:'" [inputStyle]="'simple'" [isRequired]="true"
+          [inputType]="'tel'" [inputFormControl]="phoneNumberControl"></app-custom-form-input>
+        <app-custom-form-input [label]="'Nacionalidad*:'" [inputStyle]="'simple'" [isRequired]="true"
+          [inputType]="'text'" [inputFormControl]="nationalityControl"></app-custom-form-input>
+        <app-custom-form-input [label]="'DNI / Pasaporte / NIE*:'" [inputStyle]="'simple'" [isRequired]="true"
+          [inputType]="'text'" [inputFormControl]="idCardControl"></app-custom-form-input>
+        <app-custom-form-input [label]="'Fecha de nacimiento*:'" [inputStyle]="'simple'" [isRequired]="true"
+          [inputType]="'text'" [inputFormControl]="birthDateControl"></app-custom-form-input>
+        <app-custom-form-input [label]="'Email*:'" [inputStyle]="'simple'" [isRequired]="true" [inputType]="'email'"
+          [inputFormControl]="emailControl"></app-custom-form-input>
+        <app-custom-form-input [label]="'Password*:'" [inputStyle]="'simple'" [isRequired]="true"
+          [inputType]="'password'" [inputFormControl]="passwordControl"></app-custom-form-input>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="profile-form-card">
+      <ion-card-header>
+        <ion-card-title>2. Dirección Postal</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content class="profile-form-content">
+        <app-custom-form-input [label]="'Nombre de la calle*:'" [inputStyle]="'simple'" [isRequired]="true"
+          [inputType]="'text'" [inputFormControl]="streetNameControl"></app-custom-form-input>
+        <app-custom-form-input [label]="'Número*:'" [inputStyle]="'simple'" [isRequired]="true" [inputType]="'number'"
+          [inputFormControl]="streetNumberControl"></app-custom-form-input>
+        <app-custom-form-input [label]="'Información adicional:'" [inputStyle]="'simple'" [isRequired]="false"
+          [inputType]="'text'" [inputFormControl]="streetExtrasControl"></app-custom-form-input>
+        <app-custom-form-input [label]="'Provincia*:'" [inputStyle]="'simple'" [isRequired]="true" [inputType]="'text'"
+          [inputFormControl]="provinceControl"></app-custom-form-input>
+        <app-custom-form-input [label]="'Localidad*:'" [inputStyle]="'simple'" [isRequired]="true" [inputType]="'text'"
+          [inputFormControl]="cityControl"></app-custom-form-input>
+        <app-custom-form-input [label]="'Código Postal*:'" [inputStyle]="'simple'" [isRequired]="true"
+          [inputType]="'number'" [inputFormControl]="postalCodeControl"></app-custom-form-input>
+      </ion-card-content>
+    </ion-card>
+
+    <ion-card class="profile-form-card">
+      <ion-card-header>
+        <ion-card-title>3. Vincular tarjeta '+ Renfe' (Opcional)</ion-card-title>
+      </ion-card-header>
+
+      <ion-card-content class="profile-form-content">
+        <app-custom-form-input [label]="'Nombre titular*:'" [inputStyle]="'simple'" [isRequired]="true"
+          [inputType]="'text'" [inputFormControl]="streetNameControl"></app-custom-form-input>
+        <app-custom-form-input [label]="'Nº tarjeta*:'" [inputStyle]="'simple'" [isRequired]="true"
+          [inputType]="'number'" [inputFormControl]="streetNumberControl"></app-custom-form-input>
+      </ion-card-content>
+    </ion-card>
+  </form>
 </ion-content>

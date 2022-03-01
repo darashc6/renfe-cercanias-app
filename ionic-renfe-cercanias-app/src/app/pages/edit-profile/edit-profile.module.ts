@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { CustomFormInputModule } from 'src/app/modules/custom-form-input/custom-form-input.module';
 
 import { IonicModule } from '@ionic/angular';
 
@@ -12,9 +13,11 @@ import { EditProfilePage } from './edit-profile.page';
   imports: [
     CommonModule,
     FormsModule,
+    ReactiveFormsModule,
     IonicModule,
-    EditProfilePageRoutingModule
+    EditProfilePageRoutingModule,
+    CustomFormInputModule
   ],
   declarations: [EditProfilePage]
 })
-export class EditProfilePageModule {}
+export class EditProfilePageModule { }

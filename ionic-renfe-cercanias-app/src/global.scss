@@ -50,3 +50,8 @@ ul {
 li:not(:last-child) {
   margin-bottom: 10px;
 }
+
+input.native-input.sc-ion-input-md,
+textarea.native-textarea.sc-ion-textarea-md {
+  padding: 2px 5px;
+}
