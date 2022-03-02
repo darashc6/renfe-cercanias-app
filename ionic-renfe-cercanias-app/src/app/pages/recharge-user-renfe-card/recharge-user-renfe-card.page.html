@@ -44,6 +44,7 @@
   </ion-grid>
 
   <ion-accordion-group class="fare-list-selection">
-    <app-fare-option-accordion *ngFor="let fare of fareList" [fare]="fare"></app-fare-option-accordion>
+    <app-fare-option-accordion *ngFor="let fare of fareList" [fare]="fare" [endRoute]="'/app/profile'">
+    </app-fare-option-accordion>
   </ion-accordion-group>
 </ion-content>

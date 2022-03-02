@@ -4,11 +4,11 @@ import { FormsModule } from '@angular/forms';
 
 import { IonicModule } from '@ionic/angular';
 
+import { FareOptionAccordionModule } from 'src/app/modules/fare-option-accordion/fare-option-accordion.module';
+
 import { TrainRouteInfoPageRoutingModule } from './train-route-info-routing.module';
 
 import { TrainRouteInfoPage } from './train-route-info.page';
-
-import { FareOptionAccordionComponent } from 'src/app/components/fare-option-accordion/fare-option-accordion.component';
 
 import { RouteTimingsInfoComponent } from 'src/app/components/route-timings-info/route-timings-info.component';
 
@@ -17,8 +17,9 @@ import { RouteTimingsInfoComponent } from 'src/app/components/route-timings-info
     CommonModule,
     FormsModule,
     IonicModule,
-    TrainRouteInfoPageRoutingModule
+    TrainRouteInfoPageRoutingModule,
+    FareOptionAccordionModule
   ],
-  declarations: [TrainRouteInfoPage, FareOptionAccordionComponent, RouteTimingsInfoComponent]
+  declarations: [TrainRouteInfoPage, RouteTimingsInfoComponent]
 })
 export class TrainRouteInfoPageModule {}

@@ -13,6 +13,7 @@ import { StationDetailsBtnComponent } from 'src/app/components/station-details-b
 import { SearchTrainTimingsFormComponent } from 'src/app/components/search-train-timings-form/search-train-timings-form.component';
 
 import { IconModule } from '@visurel/iconify-angular';
+import { SearchTrainTimingsFormModule } from 'src/app/modules/search-train-timings-form/search-train-timings-form.module';
 
 @NgModule({
   imports: [
@@ -20,8 +21,8 @@ import { IconModule } from '@visurel/iconify-angular';
     FormsModule,
     IonicModule,
     HomePageRoutingModule,
-    IconModule
+    SearchTrainTimingsFormModule
   ],
-  declarations: [HomePage, StationDetailsBtnComponent, SearchTrainTimingsFormComponent]
+  declarations: [HomePage, StationDetailsBtnComponent]
 })
 export class HomePageModule { }

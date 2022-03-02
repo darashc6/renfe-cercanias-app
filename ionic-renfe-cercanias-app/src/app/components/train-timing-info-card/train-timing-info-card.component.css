@@ -9,9 +9,9 @@
 .train-timing-info-card .train-line {
   background-color: var(--ion-color-light-blue);
   color: white;
-  padding: 4px;
+  padding: 5px;
   border-radius: 10%;
-  font-size: 17px;
+  font-size: 1.1em;
 }
 
 .train-timing-info-card .train-timing-row-container {
@@ -38,4 +38,8 @@
 
 .chevron-icon-container .chevron-icon {
   font-size: 1.4em;
+}
+
+.route-time {
+  font-weight: 500;
 }

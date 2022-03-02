@@ -8,9 +8,8 @@ import { TrainTimingsPageRoutingModule } from './train-timings-routing.module';
 
 import { TrainTimingsPage } from './train-timings.page';
 
-import { IconModule } from '@visurel/iconify-angular';
-
 import { TrainTimingInfoCardComponent } from 'src/app/components/train-timing-info-card/train-timing-info-card.component';
+import { SearchTrainTimingsFormModule } from 'src/app/modules/search-train-timings-form/search-train-timings-form.module';
 
 @NgModule({
   imports: [
@@ -18,7 +17,7 @@ import { TrainTimingInfoCardComponent } from 'src/app/components/train-timing-in
     FormsModule,
     IonicModule,
     TrainTimingsPageRoutingModule,
-    IconModule
+    SearchTrainTimingsFormModule
   ],
   declarations: [TrainTimingsPage, TrainTimingInfoCardComponent]
 })

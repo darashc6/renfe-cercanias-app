@@ -8,13 +8,29 @@
 </ion-header>
 
 <ion-content class="ion-padding" color="background-color">
-  <ion-card>
-    <ion-grid>
-      <app-route-timings-info *ngFor="let stop of route" [stop]="stop" [isLast]="route.indexOf(stop) === route.length - 1"></app-route-timings-info>
-    </ion-grid>
-  </ion-card>
+  <ion-accordion-group>
+    <ion-card>
+      <ion-accordion>
+        <ion-item slot="header">
+          <ion-label class="accordion-title"><b>Paradas</b></ion-label>
+        </ion-item>
+
+        <ion-item slot="content">
+          <ion-grid>
+            <app-route-timings-info *ngFor="let stop of route" [stop]="stop"
+              [isLast]="route.indexOf(stop) === route.length - 1"></app-route-timings-info>
+          </ion-grid>
+        </ion-item>
+      </ion-accordion>
+    </ion-card>
+  </ion-accordion-group>
+
+  <p class="select-ticket-text">
+    Seleccione billete a comprar
+  </p>
 
   <ion-accordion-group>
-    <app-fare-option-accordion *ngFor="let fare of basicFares" [fare]="fare"></app-fare-option-accordion>
+    <app-fare-option-accordion *ngFor="let fare of basicFares" [fare]="fare" [endRoute]="'/app/home'">
+    </app-fare-option-accordion>
   </ion-accordion-group>
 </ion-content>

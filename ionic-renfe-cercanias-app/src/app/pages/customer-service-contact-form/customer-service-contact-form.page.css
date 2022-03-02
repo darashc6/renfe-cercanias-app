@@ -2,6 +2,11 @@
   margin: 0;
 }
 
+.customer-service-form-card .subtitle {
+  font-weight: normal;
+  color: black;
+}
+
 .customer-service-form {
   padding-left: 0;
   padding-right: 0;

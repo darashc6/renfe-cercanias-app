@@ -10,7 +10,7 @@ import { RechargeUserRenfeCardPage } from './recharge-user-renfe-card.page';
 
 import { IconModule } from '@visurel/iconify-angular';
 
-import { FareOptionAccordionComponent } from 'src/app/components/fare-option-accordion/fare-option-accordion.component';
+import { FareOptionAccordionModule } from 'src/app/modules/fare-option-accordion/fare-option-accordion.module';
 
 @NgModule({
   imports: [
@@ -18,8 +18,9 @@ import { FareOptionAccordionComponent } from 'src/app/components/fare-option-acc
     FormsModule,
     IonicModule,
     RechargeUserRenfeCardPageRoutingModule,
-    IconModule
+    IconModule,
+    FareOptionAccordionModule
   ],
-  declarations: [RechargeUserRenfeCardPage, FareOptionAccordionComponent]
+  declarations: [RechargeUserRenfeCardPage]
 })
 export class RechargeUserRenfeCardPageModule { }

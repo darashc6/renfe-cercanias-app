@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 
 @Component({
   selector: 'app-confirm-action',
@@ -7,13 +7,15 @@ import { Router } from '@angular/router';
   styleUrls: ['./confirm-action.page.scss'],
 })
 export class ConfirmActionPage implements OnInit {
+  endRoute: string = '';
 
   constructor(private router: Router) { }
 
   ngOnInit() {
+    this.endRoute = this.router.getCurrentNavigation().extras.state.endRoute;
   }
 
-  goToProfilePage() {
-    this.router.navigateByUrl('/app/profile', { replaceUrl: true })
+  goToHomePage() {
+    this.router.navigateByUrl(this.endRoute, { replaceUrl: true })
   }
 }

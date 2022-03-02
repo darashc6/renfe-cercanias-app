@@ -9,12 +9,13 @@ import { Router } from '@angular/router';
 export class PaymentMethodBtnComponent implements OnInit {
   @Input() icon: string = '';
   @Input() name: string = '';
+  @Input() endRoute: string = '';
 
   constructor(private router: Router) { }
 
   ngOnInit() { }
 
   goToConfirmPage() {
-    this.router.navigateByUrl('/app/profile/recharge/confirm')
+    this.router.navigateByUrl('/app/profile/recharge/confirm', { state: { endRoute: this.endRoute } })
   }
 }

@@ -9,13 +9,14 @@ import { Fare } from 'src/app/models/Fare';
 })
 export class FareOptionAccordionComponent implements OnInit {
   @Input() fare: Fare = null;
+  @Input() endRoute: string = '';
 
   constructor(private router: Router) { }
 
   ngOnInit() { }
 
   goToPaymentPage() {
-    this.router.navigateByUrl('/app/profile/recharge/payment-method')
+    this.router.navigateByUrl('/app/profile/recharge/payment-method', { state: { endRoute: this.endRoute } })
   }
 
 }

@@ -1,5 +1,5 @@
 <ion-item lines="none">
-  <ion-label position="stacked">{{ label }}</ion-label>
+  <ion-label position="stacked" class="input-label">{{ label }}</ion-label>
   <ion-input *ngIf="inputStyle === 'simple'; else textarea" required="{{ isRequired }}" type="{{ inputType }}"
     class="input-field" [formControl]="inputFormControl">
   </ion-input>

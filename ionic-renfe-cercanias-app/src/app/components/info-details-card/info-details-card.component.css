@@ -1,0 +1,11 @@
+ion-card {
+  margin: 10px 0;
+}
+
+ion-card ion-card-title {
+  font-weight: bolder;
+}
+
+ion-card .info-text {
+  font-size: 1.1em;
+}
