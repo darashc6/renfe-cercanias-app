@@ -15,6 +15,6 @@ export class TrainLineInfoCardComponent implements OnInit {
   ngOnInit() { }
 
   goToTrainLineDetailsPage() {
-    this.router.navigateByUrl(`/app/home/train-lines/${this.trainLine.id}`);
+    this.router.navigateByUrl(`home/train-lines/${this.trainLine.id}`);
   }
 }

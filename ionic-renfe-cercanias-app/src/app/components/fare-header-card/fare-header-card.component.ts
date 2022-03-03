@@ -1,6 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
-import { Fare } from 'src/app/models/Fare';
 
 @Component({
   selector: 'app-fare-header-card',
@@ -17,6 +16,6 @@ export class FareHeaderCardComponent implements OnInit {
   ngOnInit() { }
 
   goToFareDetailsPage() {
-    this.router.navigateByUrl(`/app/home/fares/${this.fareId}`);
+    this.router.navigateByUrl(`home/fares/${this.fareId}`);
   }
 }

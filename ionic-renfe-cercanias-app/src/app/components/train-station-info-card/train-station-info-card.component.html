@@ -3,13 +3,14 @@
     <ion-col size="12">
       <ion-card class="card-station-info">
         <ion-card-header>
-          <ion-card-title class="station-name">
+          <ion-card-title class="station-name" color="dark">
             {{ station.name }}
           </ion-card-title>
         </ion-card-header>
 
         <ion-card-content class="list-additional-icons">
-          <app-additional-info-icon *ngFor="let line of station.connectedLines" [info]="line"></app-additional-info-icon> 
+          <app-additional-info-icon *ngFor="let line of station.connectedLines" [info]="line">
+          </app-additional-info-icon>
           <app-additional-info-icon *ngFor="let additionalInfo of station.additionalInfo" [info]="additionalInfo">
           </app-additional-info-icon>
         </ion-card-content>

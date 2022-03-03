@@ -1,12 +1,16 @@
-<ion-card color="white" *ngIf="info">
+<ion-card color="light" *ngIf="info">
   <ion-card-header>
-    <ion-card-title>{{ info.title }}</ion-card-title>
-    <ion-card-subtitle>{{ info.date }}</ion-card-subtitle>
+    <ion-card-title color="dark">
+      {{ info.title }}
+    </ion-card-title>
+    <ion-card-subtitle color="dark">
+      {{ info.date }}
+    </ion-card-subtitle>
   </ion-card-header>
 
   <ion-card-content>
-    <p class="info-text">
+    <ion-text class="info-text" color="dark">
       {{ info.message }}
-    </p>
+    </ion-text>
   </ion-card-content>
 </ion-card>

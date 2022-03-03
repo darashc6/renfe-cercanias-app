@@ -25,6 +25,7 @@
 .header-title {
   font-weight: bold;
   font-size: 1.3em;
+  color: black;
 }
 
 .card-content-text p {
@@ -62,4 +63,5 @@
 .download-btn .qr-icon,
 .download-btn .download-icon {
   font-size: 24px;
+  color: black;
 }

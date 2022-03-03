@@ -1,7 +1,7 @@
 <ion-header>
   <ion-toolbar color="primary">
     <ion-buttons slot="start">
-      <ion-back-button defaultHref="/app/home/train-lines"></ion-back-button>
+      <ion-back-button defaultHref="home/train-lines"></ion-back-button>
     </ion-buttons>
     <ion-title>Linea {{ trainLine.line }}</ion-title>
   </ion-toolbar>
@@ -11,7 +11,7 @@
   <ion-card>
     <ion-card-header>
       <ion-card-title>
-        <ion-label>Leyenda</ion-label>
+        <ion-label color="dark">Leyenda</ion-label>
       </ion-card-title>
     </ion-card-header>
     <ion-card-content>
@@ -23,7 +23,7 @@
                 <app-additional-info-icon [info]="'accesible'"></app-additional-info-icon>
               </ion-col>
               <ion-col offset="1" size="8">
-                <ion-label class="help-text">Accesible</ion-label>
+                <ion-label class="help-text" color="dark">Accesible</ion-label>
               </ion-col>
             </ion-row>
           </ion-col>
@@ -33,7 +33,7 @@
                 <app-additional-info-icon [info]="'bus-stop'"></app-additional-info-icon>
               </ion-col>
               <ion-col size="8" offset="1">
-                <ion-label class="help-text">Autobus</ion-label>
+                <ion-label class="help-text" color="dark">Autobus</ion-label>
               </ion-col>
             </ion-row>
           </ion-col>
@@ -45,7 +45,7 @@
                 <app-additional-info-icon [info]="'renfe-ave'"></app-additional-info-icon>
               </ion-col>
               <ion-col size="8" offset="1">
-                <ion-label class="help-text">AVE-Reg.</ion-label>
+                <ion-label class="help-text" color="dark">AVE-Reg.</ion-label>
               </ion-col>
             </ion-row>
           </ion-col>

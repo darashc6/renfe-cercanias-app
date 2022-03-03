@@ -26,7 +26,7 @@ export class SearchTrainTimingsFormComponent implements OnInit {
   }
 
   searchTimings() {
-    this.router.navigateByUrl('/app/home/timings');
+    this.router.navigateByUrl('home/timings');
   }
 
   confirmSelectedTime() {

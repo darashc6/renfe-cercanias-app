@@ -12,7 +12,6 @@ export class RouteTimingsInfoComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    console.log(this.stop, this.isLast)
   }
 
 }

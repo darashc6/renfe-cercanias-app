@@ -1,10 +1,19 @@
 import { CapacitorConfig } from '@capacitor/cli';
 
 const config: CapacitorConfig = {
-  appId: 'io.ionic.starter',
-  appName: 'ionic-renfe-cercanias-app',
+  appId: 'cenec.renfe.cercanias',
+  appName: 'Cercanias',
   webDir: 'www',
-  bundledWebRuntime: false
+  bundledWebRuntime: false,
+  plugins: {
+    SplashScreen: {
+      launchAutoHide: false,
+      showSpinner: false,
+      androidScaleType: 'CENTER_CROP',
+      splashFullScreen: false,
+      splashImmersive: false
+    }
+  }
 };
 
 export default config;

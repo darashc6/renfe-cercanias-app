@@ -10,9 +10,9 @@ export class TrainTimingInfoCardComponent implements OnInit {
 
   constructor(private router: Router) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   goToTrainRoutePage() {
-    this.router.navigateByUrl('/app/home/timings/route')
+    this.router.navigateByUrl('home/timings/route')
   }
 }

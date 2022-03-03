@@ -16,6 +16,6 @@ export class PaymentMethodBtnComponent implements OnInit {
   ngOnInit() { }
 
   goToConfirmPage() {
-    this.router.navigateByUrl('/app/profile/recharge/confirm', { state: { endRoute: this.endRoute } })
+    this.router.navigateByUrl('profile/recharge/confirm', { state: { endRoute: this.endRoute } })
   }
 }

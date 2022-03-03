@@ -36,7 +36,7 @@
   font-family: "Fredoka";
   font-style: normal;
   font-weight: 500;
-  src: url('./assets/fonts/Fredoka-Medium.ttf');
+  src: url("./assets/fonts/Fredoka-Medium.ttf");
 }
 
 @font-face {
@@ -70,6 +70,17 @@ ic-icon {
 
 ul {
   padding: 0 25px;
+  list-style: none;
+}
+
+ul li::before {
+  content: "\2022"; /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: var(--ion-color-primary); /* Change the color */
+  font-weight: bold; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 20px; /* Also needed for space (tweak if needed) */
+  margin-left: -20px; /* Also needed for space (tweak if needed) */
+  font-size: 1.5em;
 }
 
 li:not(:last-child) {
@@ -79,4 +90,18 @@ li:not(:last-child) {
 input.native-input.sc-ion-input-md,
 textarea.native-textarea.sc-ion-textarea-md {
   padding: 2px 5px;
+}
+
+// Accordion toggle icon
+// Select label text
+.ion-accordion-toggle-icon {
+  color: var(--ion-color-dark);
+}
+
+.item .sc-ion-label-md-h {
+  color: var(--ion-color-dark);
+}
+
+ion-item.ion-focused {
+  --background-focused: var(--ion-color-primary);
 }

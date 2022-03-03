@@ -16,7 +16,7 @@ export class FareOptionAccordionComponent implements OnInit {
   ngOnInit() { }
 
   goToPaymentPage() {
-    this.router.navigateByUrl('/app/profile/recharge/payment-method', { state: { endRoute: this.endRoute } })
+    this.router.navigateByUrl('profile/recharge/payment-method', { state: { endRoute: this.endRoute } })
   }
 
 }

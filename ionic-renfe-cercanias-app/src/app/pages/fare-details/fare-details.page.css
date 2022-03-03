@@ -8,7 +8,7 @@
 }
 
 .list-content li {
-  color: black;
+  color: var(--ion-color-dark);
 }
 
 .list-content li:not(:last-child) {

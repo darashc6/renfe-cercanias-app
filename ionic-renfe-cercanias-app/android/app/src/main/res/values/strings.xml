@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Cercanias</string>
+    <string name="title_activity_main">Cercanias</string>
+    <string name="package_name">cenec.renfe.cercanias</string>
+    <string name="custom_url_scheme">cenec.renfe.cercanias</string>
+</resources>

@@ -14,7 +14,7 @@ export class CustomerServicePage implements OnInit {
   }
 
   goToContactFormPage() {
-    this.router.navigateByUrl('/app/home/customer-service/contact-form');
+    this.router.navigateByUrl('home/customer-service/contact-form');
   }
 
 }
